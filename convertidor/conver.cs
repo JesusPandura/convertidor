@@ -24,8 +24,8 @@ namespace convertidor
             if(radioButton1.Checked)
             {
                 uno = double.Parse(textBox1.Text);
-
-                textBox2.Text = opera.gradoscaF(uno).ToString();
+                double c = opera.gradoscaf(uno);
+                textBox2.Text = c.ToString();
 
 
             }
@@ -37,7 +37,7 @@ namespace convertidor
 
 
                 dos = double.Parse(textBox2.Text);
-                double tres = (dos - 32) / 1.8;
+                double tres = opera.gradosfac(dos);
                 textBox1.Text = tres.ToString();
 
 
